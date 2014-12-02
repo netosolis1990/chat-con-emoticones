@@ -8,7 +8,7 @@
 			//Checamos que los mensages no contengan codigo html ni php a menos que sean emoticones...
 			//Esto es para evitar ataques
 			$usuario = strip_tags($_GET['usuario']);
-			if(!$_GET['emoticone'])$mensaje = strip_tags($_GET['mensaje']);
+			if($_GET['emoticone']=='false')$mensaje = strip_tags($_GET['mensaje']);
 			else $mensaje = $_GET['mensaje'];
 
 			/*creamos un objeto pusher que recibe como parametros APP_KEY, APP_SECRET, APP_ID */
